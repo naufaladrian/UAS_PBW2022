@@ -1,0 +1,45 @@
+@import "../../index.scss";
+
+.create-note-main {
+  display: grid;
+  position: fixed;
+  z-index: 888;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  place-items: center;
+  height: fit-content;
+  width: fit-content;
+  background-color: $primary-font-color;
+  border: 2px solid $primary-bg-color;
+  border-radius: 2%;
+  padding: 30px 50px;
+  img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    margin: 10px 10px 0px 0px;
+    cursor: pointer;
+  }
+  h2 {
+    font-family: $poppin;
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: $primary-bg-color;
+  }
+  form {
+    input,
+    select {
+      color: gray;
+      padding: 10px 7px;
+      font-size: 14px;
+      margin-bottom: 22px;
+      border: none;
+      outline: none;
+      background-color: whitesmoke;
+      width: 200px;
+      border-bottom: 1px solid $primary-bg-color;
+    }
+  }
+}

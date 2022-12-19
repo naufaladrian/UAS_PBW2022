@@ -1,0 +1,53 @@
+@import "../../index.scss";
+
+#addNotes {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 30px;
+  cursor: pointer;
+}
+.home-main {
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 0px;
+  position: relative;
+
+  aside {
+    position: fixed;
+    padding: 50px 0px;
+    padding-left: 100px;
+    height: 92vh;
+    width: $col3-width;
+    border-right: 1px solid black;
+    font-family: $poppin;
+    .filter {
+      margin-bottom: 20px;
+      h2 {
+        font-weight: 600;
+        font-size: 16px;
+        margin-bottom: 5px;
+      }
+      input {
+        margin-bottom: 10px;
+      }
+      label {
+        font-size: 14px;
+        margin-left: 10px;
+      }
+    }
+  }
+  .card-container {
+    position: absolute;
+    right: 0;
+    overflow-y: auto;
+    height: fit-content;
+    width: $col9-width;
+    display: grid;
+    padding: 30px;
+    padding-right: 80px;
+    grid-template-columns: auto auto auto auto;
+    gap: 30px 30px;
+  }
+}

@@ -1,0 +1,134 @@
+@import "../../index.scss";
+
+button {
+  cursor: pointer;
+}
+.land-main {
+  margin-top: 60px;
+  font-family: $poppin;
+  section {
+    margin: 150px 0px;
+    //background-color: blanchedalmond;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: $max-mobile) {
+      grid-template-columns: auto;
+      margin-top: 40px;
+    }
+    figure {
+      @media (max-width: $max-mobile) {
+        text-align: center;
+      }
+      img {
+        width: $col8-width;
+        @media (max-width: $max-mobile) {
+          width: $col7-width;
+        }
+      }
+    }
+    .text {
+      h1 {
+        font-size: 31px;
+        @media (max-width: $max-tablet) {
+          font-size: 22px;
+        }
+      }
+      button {
+        margin: 20px 0px;
+        padding: 8px 18px;
+        border-radius: 8px;
+        background-color: $primary-bg-color;
+        color: $primary-font-color;
+        border: 1px solid $primary-bg-color;
+      }
+      p {
+        font-size: 20px;
+        margin-top: 10px;
+        @media (max-width: $max-tablet) {
+          font-size: 14px;
+        }
+      }
+      @media (max-width: $max-mobile) {
+        text-align: center;
+      }
+    }
+  }
+  .contact {
+    font-family: $montserrat;
+    background-color: gray;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-bottom: 0px;
+    padding-top: 20px;
+    justify-content: space-between;
+    p {
+      font-weight: 300;
+    }
+    form {
+      margin: 30px 20px;
+      flex: 1;
+      input {
+        padding: 5px;
+        margin: 5px 0px;
+      }
+      textarea {
+        resize: none;
+        padding: 5px;
+        margin: 5px 0px;
+        font-family: $montserrat;
+        width: 200px;
+        height: 50px;
+      }
+      button {
+        font-family: $montserrat;
+        border-radius: 5px;
+        background-color: rgb(52, 52, 52);
+        border: 1px solid whitesmoke;
+        color: white;
+        padding: 5px 9px;
+      }
+    }
+    .sitemap {
+      margin: 30px 20px;
+      flex: 1;
+      display: block;
+
+      ul {
+        li {
+          list-style: none;
+        }
+      }
+    }
+    address {
+      margin: 30px 20px;
+      font-style: normal;
+      flex: 2;
+      .contact-item {
+        margin-top: 7px;
+        display: flex;
+        align-items: center;
+        img {
+          margin-right: 10px;
+          width: 12px;
+          height: 12px;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  font-family: $montserrat;
+  font-weight: 200;
+  background-color: rgb(53, 53, 53);
+  color: white;
+  text-align: center;
+  p {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
