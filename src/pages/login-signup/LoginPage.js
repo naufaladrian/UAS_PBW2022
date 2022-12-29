@@ -27,10 +27,11 @@ export default function LoginPage() {
     inputUsername = username.target.value;
   };
 
-  const login = () => {
+  const login = (e) => {
+    e.preventDefault();
     pass === inputPassword && user === inputUsername
       ? navigate("/home")
-      : alert("SALAH BLOK!");
+      : alert("Username/Password Salah");
   };
   return (
     <>

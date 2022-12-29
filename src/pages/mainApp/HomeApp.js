@@ -2,19 +2,27 @@ import React, { useState } from "react";
 import NavBar from "../../component/NavBar/NavBar";
 import HomeNav from "../../component/NavBar/HomeNav";
 import "./HomeStyle.scss";
-import Card from "../../component/card/Card";
 import addCircle from "../../assets/icon/add_circle.svg";
 import DataUser from "../../data.json";
 import CreateNotes from "../createNotes/CreateNotes";
+import "../../component/card/CardStyle.scss";
+
 export default function HomeApp() {
   const [ispopup, setPopup] = useState(false);
+  const [change, setChange] = useState("");
   const closeModal = () => {
     setPopup(false);
   };
   return (
     <>
       <NavBar>
-        <HomeNav />
+        <HomeNav>
+          <input
+            type="search"
+            placeholder="Search..."
+            onChange={(e) => setChange(e.target.value)}
+          />
+        </HomeNav>
       </NavBar>
       <main className="home-main">
         <aside className="filter-container ">
@@ -113,9 +121,24 @@ export default function HomeApp() {
             alt="add"
             onClick={() => setPopup(true)}
           />
-
           {DataUser.map((dataUser) => {
-            return <Card key={dataUser.notes.map((e) => e.id)} />;
+            return dataUser.notes
+              .filter((e) => e.title.toLocaleLowerCase().includes(change))
+              .map((e) => {
+                return (
+                  <div
+                    className="card"
+                    key={dataUser.id}
+                    onClick={() => window.open(e.note)}
+                  >
+                    <img src={e.img} alt="" />
+                    <div className="note-desc" key={e.id}>
+                      <h2>{e.title}</h2>
+                      <p>{dataUser.username}</p>
+                    </div>
+                  </div>
+                );
+              });
           })}
         </section>
         <CreateNotes closeModal={closeModal} modalControl={ispopup} />
