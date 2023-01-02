@@ -5,6 +5,7 @@
   border-radius: 10px;
   border: 1px solid black;
   cursor: pointer;
+  position: relative;
   img {
     border-radius: 10px 10px 0px 0px;
     width: 100%;
@@ -21,6 +22,9 @@
       font-family: $poppin;
       font-size: 10px;
       font-weight: 500;
+      position: absolute;
+      bottom: 5px;
+      left: 10px;
     }
   }
 }

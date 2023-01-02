@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./LoginSignup.scss";
 import Nslogo from "../../assets/icon/nslogo.png";
-import UserData from "../../data.json";
+import UserData from "../../Data";
 
 export default function LoginPage() {
   const navigate = useNavigate();
@@ -14,11 +14,8 @@ export default function LoginPage() {
   let inputUsername = "";
   let inputPassword = "";
 
-  UserData.map((dataUser) => {
-    pass = dataUser.password;
-    user = dataUser.username;
-  });
-
+  pass = UserData.password;
+  user = UserData.username;
   const getPassword = (password) => {
     inputPassword = password.target.value;
   };

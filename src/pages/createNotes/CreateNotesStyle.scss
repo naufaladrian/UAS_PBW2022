@@ -14,6 +14,14 @@
   border: 2px solid $primary-bg-color;
   border-radius: 2%;
   padding: 30px 50px;
+  text-align: center;
+  button {
+    background-color: $primary-bg-color;
+    color: $primary-font-color;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
   img {
     position: absolute;
     top: 0;
