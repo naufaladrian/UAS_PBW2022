@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./LoginSignup.scss";
 import Nslogo from "../../assets/icon/nslogo.png";
-
+import UnPopUp from "../../component/unavailable/UnPopUp";
 export default function SignupPage() {
   const navigate = useNavigate();
   const login = () => {
@@ -44,6 +44,7 @@ export default function SignupPage() {
           <p onClick={login}>Already have an account? click here!</p>
         </section>
       </main>
+      <UnPopUp />
     </>
   );
 }

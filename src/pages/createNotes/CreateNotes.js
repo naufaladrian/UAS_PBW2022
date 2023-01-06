@@ -24,48 +24,47 @@ export default function CreateNotes({ closeModal, modalControl }) {
 
   return (
     <>
-      <main
-        className=" create-note-main"
-        style={{ display: modalControl ? "" : "none" }}
-      >
-        <h2>Tambah Catatan</h2>
-        <img src={close} alt="" onClick={closeModal} />
-        <form>
-          <input
-            type="text"
-            placeholder="Judul"
-            onChange={(e) => setTitle(e.target.value)}
-          />
-          <br />
-          <select
-            name="grade"
-            id="grade"
-            onChange={(e) => setKelas(e.target.value)}
-          >
-            <option value="SMP">SMP</option>
-            <option value="SMA">SMA</option>
-          </select>
-          <br />
-          <select
-            name="mapel"
-            id="mapel"
-            onChange={(e) => setMapel(e.target.value)}
-          >
-            <option value="Matematika">Matematika</option>
-            <option value="Sejarah">Sejarah</option>
-            <option value="IPA">IPA</option>
-            <option value="Komputer">Komputer</option>
-          </select>
-          <br />
-          <input
-            type="url"
-            placeholder="Link/Alamat Catatan"
-            onChange={(e) => setLink(e.target.value)}
-          />
-          <br />
-          <button onClick={(e) => handleSubmit(e)}>Tambah</button>
-        </form>
-      </main>
+      <div className="popup-bg" style={{ display: modalControl ? "" : "none" }}>
+        <div className=" create-note-main">
+          <h2>Tambah Catatan</h2>
+          <img src={close} alt="" onClick={closeModal} />
+          <form>
+            <input
+              type="text"
+              placeholder="Judul"
+              onChange={(e) => setTitle(e.target.value)}
+            />
+            <br />
+            <select
+              name="grade"
+              id="grade"
+              onChange={(e) => setKelas(e.target.value)}
+            >
+              <option value="SMP">SMP</option>
+              <option value="SMA">SMA</option>
+            </select>
+            <br />
+            <select
+              name="mapel"
+              id="mapel"
+              onChange={(e) => setMapel(e.target.value)}
+            >
+              <option value="Matematika">Matematika</option>
+              <option value="Sejarah">Sejarah</option>
+              <option value="IPA">IPA</option>
+              <option value="Komputer">Komputer</option>
+            </select>
+            <br />
+            <input
+              type="url"
+              placeholder="Link/Alamat Catatan"
+              onChange={(e) => setLink(e.target.value)}
+            />
+            <br />
+            <button onClick={(e) => handleSubmit(e)}>Tambah</button>
+          </form>
+        </div>
+      </div>
     </>
   );
 }

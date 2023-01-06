@@ -1,5 +1,4 @@
 @import "../../index.scss";
-
 .popup-bg {
   position: absolute;
   z-index: 8887;
@@ -8,7 +7,8 @@
   width: 100vw;
   height: 100vh;
 }
-.create-note-main {
+.unavailable-content {
+  font-family: $poppin;
   display: grid;
   position: absolute;
   z-index: 8888;
@@ -23,39 +23,19 @@
   border-radius: 2%;
   padding: 30px 50px;
   text-align: center;
+  h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+  p {
+    margin-top: 3px;
+  }
   button {
+    margin-top: 10px;
     background-color: $primary-bg-color;
     color: $primary-font-color;
     border: none;
     padding: 5px 10px;
     border-radius: 5px;
-  }
-  img {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 20px;
-    margin: 10px 10px 0px 0px;
-    cursor: pointer;
-  }
-  h2 {
-    font-family: $poppin;
-    font-size: 20px;
-    margin-bottom: 20px;
-    color: $primary-bg-color;
-  }
-  form {
-    input,
-    select {
-      color: gray;
-      padding: 10px 7px;
-      font-size: 14px;
-      margin-bottom: 22px;
-      border: none;
-      outline: none;
-      background-color: whitesmoke;
-      width: 200px;
-      border-bottom: 1px solid $primary-bg-color;
-    }
   }
 }

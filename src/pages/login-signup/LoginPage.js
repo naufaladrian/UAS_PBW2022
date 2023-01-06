@@ -64,6 +64,10 @@ export default function LoginPage() {
           <p onClick={signup}>Need an account? click here!</p>
         </section>
       </main>
+      {setTimeout(
+        () => alert("Login Dengan\nUsername : user123\nPassword : user123"),
+        1000
+      )}
     </>
   );
 }

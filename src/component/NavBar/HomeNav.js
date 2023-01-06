@@ -10,11 +10,10 @@ export default function HomeNav({ children }) {
       <div className="nav-right nav-flex ">
         {children}
         <div className="nav-flex">
-          <div className="your-notes">
-            <img src={bookVector} alt="book" />
-            <p>Your Notes</p>
-          </div>
           <img src={profile} alt="profile"></img>
+          <div className="your-notes">
+            <p onClick={() => navigate("/")}>Logout</p>
+          </div>
         </div>
       </div>
     </>

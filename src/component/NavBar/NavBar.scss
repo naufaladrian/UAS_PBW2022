@@ -4,7 +4,7 @@
 nav {
   position: fixed;
   top: 0;
-  z-index: 9999;
+  z-index: 999;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -96,6 +96,11 @@ nav {
       margin-right: 20px;
       p {
         padding-left: 15px;
+        cursor: pointer;
+        margin-left: 15px;
+        padding-right: 15px;
+        border-right: 1px solid white;
+        border-left: 1px solid white;
       }
     }
   }

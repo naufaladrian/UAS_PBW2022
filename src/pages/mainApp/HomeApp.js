@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import NavBar from "../../component/NavBar/NavBar";
 import HomeNav from "../../component/NavBar/HomeNav";
 import "./HomeStyle.scss";
@@ -51,8 +51,8 @@ export default function HomeApp() {
               );
             })}
         </section>
-        <CreateNotes closeModal={closeModal} modalControl={ispopup} />
       </main>
+      <CreateNotes closeModal={closeModal} modalControl={ispopup} />
     </>
   );
 }

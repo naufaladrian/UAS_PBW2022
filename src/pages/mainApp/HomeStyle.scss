@@ -12,34 +12,8 @@
   display: flex;
   justify-content: space-between;
   padding-right: 0px;
-  position: relative;
-
-  aside {
-    position: fixed;
-    padding: 50px 0px;
-    padding-left: 100px;
-    height: 92vh;
-    width: $col3-width;
-    border-right: 1px solid black;
-    font-family: $poppin;
-    .filter {
-      margin-bottom: 20px;
-      h2 {
-        font-weight: 600;
-        font-size: 16px;
-        margin-bottom: 5px;
-      }
-      input {
-        margin-bottom: 10px;
-      }
-      label {
-        font-size: 14px;
-        margin-left: 10px;
-      }
-    }
-  }
   .card-container {
-    overflow-x: auto;
+    overflow-x: none;
     height: fit-content;
     width: 100%;
     display: grid;
