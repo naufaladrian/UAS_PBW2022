@@ -45,7 +45,7 @@
     color: $primary-bg-color;
   }
   form {
-    input,
+    .input,
     select {
       color: gray;
       padding: 10px 7px;
@@ -56,6 +56,36 @@
       background-color: whitesmoke;
       width: 200px;
       border-bottom: 1px solid $primary-bg-color;
+    }
+    .uploadfile-wrapper {
+      display: flex;
+      align-items: center;
+      color: gray;
+      padding: 10px 7px;
+      font-size: 14px;
+      border: none;
+      outline: none;
+      background-color: whitesmoke;
+      width: 200px;
+      border-bottom: 1px solid $primary-bg-color;
+      .file {
+        // visibility: hidden;
+        &::file-selector-button {
+          display: none;
+        }
+      }
+      label {
+        font-weight: bold;
+        color: $primary-bg-color;
+        padding: 3px;
+        border: thin solid $primary-bg-color;
+        border-radius: 3px;
+        margin-right: 5px;
+        font-family: $poppin;
+        font-weight: 300;
+        font-size: 12px;
+        width: 200px;
+      }
     }
   }
 }

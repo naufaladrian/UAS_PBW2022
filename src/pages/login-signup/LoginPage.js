@@ -30,16 +30,23 @@ export default function LoginPage() {
       ? navigate("/home")
       : alert("Username/Password Salah");
   };
+  setTimeout(
+    () => alert("Login Dengan\nUsername : user123\nPassword : user123"),
+    1000
+  );
   return (
     <>
       <main className="login-main ">
+        <span className="left-arrow" onClick={() => navigate("/")}>
+          &larr;
+        </span>
         <section className="login-left">
           <div className="log-left-cont">
             <img src={Nslogo} alt="logo" />
             <h1>
               Share Your Notes
               <br />
-              Login <span className="right-arrow">&rarr;</span>
+              Login <span className="arrow">&rarr;</span>
             </h1>
           </div>
         </section>
@@ -48,11 +55,15 @@ export default function LoginPage() {
           <h2>Login</h2>
           <form>
             <hr />
-            <input type="text" placeholder="Username" onChange={getUsername} />
+            <input
+              type="text"
+              placeholder="Username: user123"
+              onChange={getUsername}
+            />
             <br />
             <input
               type="password"
-              placeholder="Password"
+              placeholder="Password: user123"
               onChange={getPassword}
             />
             <br />
@@ -64,10 +75,6 @@ export default function LoginPage() {
           <p onClick={signup}>Need an account? click here!</p>
         </section>
       </main>
-      {setTimeout(
-        () => alert("Login Dengan\nUsername : user123\nPassword : user123"),
-        1000
-      )}
     </>
   );
 }

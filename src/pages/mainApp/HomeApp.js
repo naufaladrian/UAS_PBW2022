@@ -5,7 +5,6 @@ import "./HomeStyle.scss";
 import addCircle from "../../assets/icon/add_circle.svg";
 import DataUser from "../../Data";
 import CreateNotes from "../createNotes/CreateNotes";
-import "../../component/card/CardStyle.scss";
 
 export default function HomeApp() {
   const [ispopup, setPopup] = useState(false);

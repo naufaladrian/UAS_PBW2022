@@ -1,5 +1,4 @@
 import React from "react";
-import bookVector from "../../assets/icon/bookVector.png";
 import profile from "../../assets/icon/profile.png";
 import { useNavigate } from "react-router-dom";
 export default function HomeNav({ children }) {

@@ -3,11 +3,22 @@
   font-family: $poppin;
   display: flex;
   width: 100vw;
+  overflow: hidden;
+  .left-arrow {
+    color: $primary-bg-color;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 30px;
+    font-size: 50px;
+    cursor: pointer;
+  }
   .login-left {
     flex: 1;
     height: 100vh;
     background-color: $primary-font-color;
     color: $primary-bg-color;
+    overflow: hidden;
     .log-left-cont {
       margin-left: 15%;
       img {
@@ -31,6 +42,7 @@
     background-color: $primary-bg-color;
     color: $primary-font-color;
     font-family: $poppin;
+    overflow: hidden;
     h2 {
       font-weight: 500;
       margin: 15px;
