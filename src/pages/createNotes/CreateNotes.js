@@ -94,7 +94,7 @@ export default function CreateNotes({ closeModal, modalControl }) {
               <option value="Komputer">Komputer</option>
               <option value="Sosiologi">Sosiologi</option>
               <option value="Geografi">Geografi</option>
-              <option value="Psokologi">Psokologi</option>
+              <option value="Psokologi">Psikologi</option>
               <option value="Lainnya">Lainnya</option>
             </select>
             <br />
